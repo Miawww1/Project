@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <bs4-navbar-expand-sm-purple>
+            <nav class="navbar navbar-expand-sm navbar-purple bg-purple" style="padding: 10px;">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="logo.png" height="100px" alt="Prototype">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul  class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" style="color: black; font-weight: bold;">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html" style="color: black; font-weight: bold;">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html" style="color: black; font-weight: bold;">Contact</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" style="color: whitesmoke; " href="#">Register</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </bs4-navbar-expand-sm-purple>
+</head>
+<body>
+    <style>
+        /* Reset Doc */
+        * html, body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-image: url(bgabout.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 20%;
+            color: whitesmoke;
+        }
+        .btn {
+            text-size-adjust: 100px;
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgb(211, 142, 14);
+            border-color: rgb(211, 142, 14);
+
+        }
+        .btn:hover {
+            border-color: rgb(184, 124, 14);
+            background-color: rgb(184, 124, 14);
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+            transition-delay: .1s;
+        }
+        /* Bagian paling atas background */
+        .uppertext {
+            text-align: center;
+            justify-content: center;
+            color: whitesmoke;
+            text-transform: capitalize;
+            padding-top: 5%;
+            
+        }
+        /* Perbagian */
+        .bagian1 {
+            padding-top: 200px;
+            color: black;
+        }
+        .bagian2 {
+            color: black;
+            padding-top: 100px;
+        }
+        .bagian3{
+            padding-top: 100px;
+            color: black;
+            padding-bottom: 150px;
+        }
+        .bagian4 {
+            color: black;
+        }
+        .partbagian4 {
+            padding-top: 100px;
+            padding-bottom: 200px;
+        }
+        /* card */
+        .card {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            width: 250px;
+            margin-top: 30px;
+            margin-right: 100px;
+        }
+    </style>
+    <div class="uppertext">
+        <h1 style="font-weight: bold;">ABOUT US</h1>
+        <p>discover the world with us: your trusted travel partner</p>
+    </div>
+    <div class="bagian1">
+        <div class="container">
+        <main class="partbagian1" style="background-color: white;">
+            <img src="pexels-dominika-roseclay-1252500.jpg" alt="image1" style="width: 43%; height: 45%; float: left; padding-top: 5%;">
+            <div class="textbagian1">
+                <h3 style="padding-left: 50%; padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold;">menghubungkan anda dengan destinasi impian anda</h3>
+                <p style="padding-left: 50%; padding-right: 5%; padding-top: 4%;">Kami adalah tempat yang sempurna bagi para pencari petualangan yang haus akan pengalaman baru dan destinasi menakjubkan. Kami tidak hanya menyediakan informasi tentang destinasi populer, tetapi juga memberikan pandangan mendalam tentang destinasi tersembunyi yang jarang diketahui oleh banyak orang.</p>
+            </div>
+        </main>
+        </div>
+    </div>
+    <div class="bagian2">
+        <main class="partbagian2" style="background-color: whitesmoke;">
+            <h3 style="text-align: center; justify-content: center; padding-top: 5%; text-transform: capitalize; font-weight: bold;">kenapa memilih kami?</h3>
+            <div class="container" style="padding-left: 5%; padding-bottom: 7%;">
+                <div class="row mt-4">
+                    <div class="cold-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="rating.png" alt="card1" style="width: 40%; height: 50%; padding-bottom: 55px;">
+                                <p>Kami siap menjawab tantangan dan mengeksplorasi peluang baru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cold-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="travel-and-tourism.png" alt="card2" style="width: 40%; height: 50%; padding-bottom: 
+                                30px;">
+                                <p>Menyediakan beragam pilihan paket perjalanan yang dapat disesuaikan dengan preferensi pelanggan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cold-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="service.png" alt="card3" style="width: 40%; height: 50%; padding-bottom: 30px;">
+                                <p style="padding-bottom: 25px;">Memberikan dukungan pelanggan yang ramah, responsif, dan informatif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="bagian3">
+        <div class="container">
+            <main class="partbagian3" style="background-color: white;">
+                <img src="pexels-haley-black-2087391.jpg" alt="image3" style="width: 45%; height: 20%; float: left;">
+                <div class="textbagian3">
+                    <h3 style="text-align: center; justify-content: center; padding-top: 5%; text-transform: capitalize; font-weight: bold;">VISI</h3>
+                    <p style="text-align: right; padding-top: 4%; padding-left: 50%;">Menjadi penghubung yang andal dan terpercaya bagi para pelancong di seluruh dunia, memberikan akses mudah dan pengalaman perjalanan yang tak terlupakan. Kami berkomitmen untuk menginspirasi orang untuk menjelajahi dunia dengan memberikan informasi terpercaya, rekomendasi pilihan, dan layanan yang ramah bagi setiap pelanggan.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="bagian4">
+        <main class="partbagian4" style="background-color: whitesmoke;">
+            <div class="container">
+                <img src="pexels-nappy-1058959.jpg" alt="image4" style="width: 40%; height: 20%; float: right;">
+                <div class="textbagian4">
+                    <h3 style="text-align: center; justify-content: center; padding-top: 5%; text-transform: capitalize; font-weight: bold;"> MISI</h3>
+                    <p style=" padding-right: 50%;">Menyediakan platform yang andal dan terpercaya untuk memenuhi kebutuhan perjalanan pelanggan, dengan mengutamakan kepuasan dan kenyamanan mereka. kami berkomitmen untuk terus berinovasi, meningkatakan kualitas layanan, dan menjaga keberlanjutan lingkungan dalam industri perjalanan.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

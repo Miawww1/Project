@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- Java Script -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <bs4-navbar-expand-sm-purple>
+            <nav class="navbar navbar-expand-sm navbar-purple bg-purple" style="padding: 10px;">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="logo.png" height="100px" alt="Prototype">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul  class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" style="color: black; font-weight: bold;">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html" style="color: black; font-weight: bold;">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html" style="color: black; font-weight: bold;">Contact</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary" style="color: whitesmoke; background-color: rgb(211, 142, 14); border-color: rgb(211, 142, 14); border-radius: 15px;" href="#">Register</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </bs4-navbar-expand-sm-purple>
+</head>
+<body>
+    <style>
+        *, html, body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        .navigation {
+            display: flex;
+            position: sticky;
+            margin-top: 100px;
+            list-style: none;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            font-size: larger;
+        }
+        .navigation a {
+            color: lightgrey;
+            text-decoration: none;
+            transition: all;
+            transition-duration: 300ms;
+            border-bottom: 4px solid rgba(172, 255, 47, 0);
+        }
+        .navigation a:hover,a.active {
+            color: greenyellow;
+            border-bottom: 4px solid greenyellow;
+            padding-bottom: 10px;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+        }
+    </style>
+    <script>
+        let section = Prototype.querySelectorAll('section');
+        let navLinks = Prototype.querySelectorAll('.navigation a');
+
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.Attribute('id');
+                
+                if(top >= offset && top < offset + height) {
+                    navlinks.forEach(links => {
+                        links.classlist.remove('active');
+                        Prototype.querySelector('.navigation a [href*=' + id + ']').classlist.add('active');
+                    });
+                };
+            });
+        };
+    </script>
+    <div class="container">
+        <img src="Semarang.jpg" alt="rajaempat" style="padding-left: 50px; padding-top: 100px; width: 55%; height: 60%; float: left;">
+        <h4 style="padding-top: 100px; padding-left: 650px; padding-bottom: 20px; font-weight: bold;">Paket Tour "Jelajah Keindahan Semarang"</h4>
+        <div style="padding-left: 660px;">
+        <button type="button" class="btn btn-outline-warning" style="color: black; font-weight: bold; border-radius: 0; border-color: rgb(211, 142, 14); padding-left: 20px; padding-right: 20px;">1 Orang</button>
+        <button type="button" class="btn btn-outline-warning" style="color: black; font-weight: bold; border-radius: 0; border-color: rgb(211, 142, 14); padding-left: 20px; padding-right: 20px;  margin-left: 10px;">2 Orang</button>
+        <button type="button" class="btn btn-outline-warning" style="color: black; font-weight: bold; border-radius: 0; border-color: rgb(211, 142, 14); padding-left: 20px; padding-right: 20px;  margin-left: 10px;">3 Orang</button>
+        </div>
+        <div style="padding-top: 10px; padding-left: 660px;">
+        <button type="button" class="btn btn-outline-warning" style="color: black; font-weight: bold; border-radius: 0; border-color: rgb(211, 142, 14); padding-left: 20px; padding-right: 20px;">4 Orang</button>
+        <button type="button" class="btn btn-outline-warning" style="color: black; font-weight: bold; border-radius: 0; border-color: rgb(211, 142, 14); padding-left: 20px; padding-right: 20px;  margin-left: 10px;">5 Orang</button>
+        </div>
+        <div style="padding-top: 50px; padding-left: 680px;">
+            <a style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color: rgb(247, 247, 247); font-weight: bold; font-size: 18px;">Rp.1.000.000</a>
+            <div style="padding-top: 30px;">
+                <img src="clock.png" style="width: 4%; height: 4%;">
+                <a>2 Days</a>
+                <a style="padding-left: 50px;">
+                <img src="placeholder.png" style="width: 4%; height: 4%;">
+                <a>Semarang</a>
+            </div>
+        </div>
+        <div   style="padding-left: 750px; padding-top: 30px;">
+        <a type="button" class="btn btn-primary" href="#" style="padding-left: 50px; padding-right: 50px; padding-top: 5px; padding-bottom: 5px; font-weight: bold; font-size: 18px; background-color: rgb(211, 142, 14); border-color: rgb(211, 142, 14);">Booking</a>
+        </div>
+    <P style="padding-left: 50px; padding-top: 50px; padding-right: 300px; font-size: large ;">
+        Bertemu dengan wisata yang memiliki unsur sejarah yang dikayakan oleh kuliner yang memanjakan lidah dan ditambahkan 
+        oleh wisata yang memilki unsur kaya akan keagamaan dan budaya seperti Klenteng Sam Poo Kong. 
+        Mengunjungi berbagai elemen-elemen wisata yang tidak akan anda kecewakan dan akan meninggalkan memori indah dalam seumur hidup.
+    </P>
+    </div>
+    <div class="container">
+        <ul class="navigation">
+            <li><a class="active" href="#Intenery">Intenery</a></li>
+            <li><a href="#Include & Exclude">Include & Exclude</a></li>
+            <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
+            <li><a href="#Note">Note</a></li>
+        </ul>
+        <img src="Semarang.jpg" alt="semarang" style="float: right; width: 40%; height: 40%; padding-top: 50px;">
+        <p style="padding-top: 100px; font-weight: bold; font-size: large;">Day 1</p>
+        <P style="padding-right: 500px; font-size: large;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama.<br>
+            Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati
+            keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal,<br>
+            Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+            hiburan lokal atau kegiatan santai.
+        </P>
+        <img src="Semarang.jpg" alt="semarang" style="float: left; width: 40%; height: 40%; padding-top: 70px;">
+        <P style="padding-top: 100px; padding-left: 500px; font-weight: bold; font-size: large;">Day 2</P>
+        <P style="padding-left: 500px; font-size: large;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama.<br>
+            Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati
+            keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal,<br>
+            Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+            hiburan lokal atau kegiatan santai.
+        </P>
+    </div>
+</body>
+</html>
