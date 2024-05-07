@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Java Script -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        body{
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 100%;
+            height: 100vh;
+            background-image: url(assets/img/bgindex3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            justify-content: center;
+            align-items: center;
+            padding-top: 15%;
+        }
+        main {
+            padding: 5%;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.712);
+            box-shadow: 0 0 100px rgba(255,255,255,.3);
+        }
+        .container label {
+            color: whitesmoke;
+            text-align: left;
+        }
+        .container form input {
+            width: calc(100% - 20px);
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid rgb(211, 142, 14);
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 2%;
+        }
+        .btn {
+            width: 30%;
+            height: 40px;
+            border: none;
+            background-color:rgb(211, 142, 14);
+            font-size: 18px;
+            color: #fafafa;
+            border-radius: 20px;
+        }
+        .btn:hover {
+            border-color: rgb(184, 124, 14);
+            background-color: rgb(184, 124, 14);
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+            transition-delay: .1s;
+        }
+        .register {
+            color: whitesmoke;
+        }
+        .register:hover {
+            color: rgb(60, 60, 255);
+
+        }
+    </style>
+    <div class="container" style="display:flex ;">
+        <main>
+            <h3 style="text-align: center;">Register</h3>
+            <form>
+                <label>Username</label>
+                <input type="text">
+                <br>
+                <label>Password</label>
+                <input type="text">
+                <br>
+                <label>Email</label>
+                <input type="email">
+                <br>
+            </form>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <a class="btn btn-primary" href="Login.html">Register</a>
+                <p>Sudah punya akun?
+                    <a href="login.html" class="register">Login di sini</a>
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

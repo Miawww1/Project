@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- Java Script -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+              <a class="navbar-brand" href="#page-top">
+                <img src="assets/logo.png" height="100px" alt="Prototype">
+              </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: black;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" style="color: black;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color: black;">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary" style="color: whitesmoke;" href="register.html">Register</a>
+            </div>
+            </div>
+        </nav>
+</head>
+<body>
+    <style>
+        /* body */
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-image: url(assets/img/bgindex3.jpg);
+            background-size: 100% 20%;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            color: whitesmoke;
+            text-align: left;
+        }
+        #mainNav {
+            min-height: 3.5rem;
+            background-color: #fff;
+        }
+        #mainNav .navbar-toggler {
+            font-size: 80%;
+            padding: 0.75rem;
+            color: #64a19d;
+            border: 1px solid #64a19d;
+        }
+        #mainNav .navbar-toggler:focus {
+            outline: none;
+        }
+        #mainNav .navbar-brand {
+            color: #000;
+            font-weight: 700;
+            padding: 0.9rem 0;
+        }
+        #mainNav .navbar-nav .nav-item:hover {
+            color: fade(#fff, 80%);
+            outline: none;
+            background-color: transparent;
+        }
+        #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+            outline: none;
+            background-color: transparent;
+        }
+        @media (min-width: 992px) {
+        #mainNav {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link {
+            transition: none;
+            padding: 2rem 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        #mainNav .nav-link:active {
+            color: #fff;
+        }
+        #mainNav.navbar-shrink {
+            background-color: #fff;
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+            color: #000;
+        }
+        #mainNav.navbar-shrink .nav-link {
+            color: #000;
+            padding: 1.5rem 1.5rem 1.25rem;
+            border-bottom: 0.25rem solid transparent;
+        }
+        #mainNav.navbar-shrink .nav-link:hover {
+            color: #64a19d;
+        }
+        #mainNav.navbar-shrink .nav-link:active {
+            color: #467370;
+        }
+        #mainNav.navbar-shrink .nav-link.active {
+            color: #64a19d;
+            outline: none;
+            border-bottom: 0.25rem solid #64a19d;
+        }
+        }
+
+        main {
+            background-color: white;
+            color: black;
+        }
+        li {
+            list-style-type: none;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .btn {
+            text-size-adjust: 10%;
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgb(211, 142, 14);
+            border-color: rgb(211, 142, 14);
+
+        }
+        .btn:hover {
+            border-color: rgb(184, 124, 14);
+            background-color: rgb(184, 124, 14);
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+            transition-delay: .1s;
+        }
+        /* card */
+        .card {
+            background-color: rgb(247, 247, 247);
+            border-bottom: none;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+        }
+        /* Make the image fully responsive */
+        .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        }
+        .carousel-slide {
+            animation: forwards;
+        }
+        .carousel-control-prev :hover {
+            transition: .5s ease-in-out;
+            transition-delay: .5s;
+        }
+        .carousel-control-next :hover{
+            transition: .5s ease-in-out;
+            transition-delay: .5s;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            color: black;
+            background-image: none;
+        }
+        .card-footer {
+            text-align: center;
+            background-color: gray;
+        }
+        .card-footer-inner {
+            color: whitesmoke;
+        }
+    </style>
+    <div class="container" style="padding-bottom: 5%;">
+        <p style="padding-top: 40%;">SEE EVERYHING</p>
+        <h1>IN THE WORLD & EXPLORE THE WORLD</h1>
+        <h3 style="padding-bottom: 2%;">Go explore the world with a variety of attractive and affordable tour packages</h3>
+        <a class="btn btn-primary" href="#Explore">EXPLORE</a>
+    </div>
+    <div style="padding-top: 1%; padding-bottom: 10%; background-color: white;">
+        <div>
+            <div style="padding-top: 2%; padding-left: 15%; padding-right: 15%;">
+                <h1 style="text-align: center; color: black;" id="Explore">Tour Package Recomendation</h1>
+            </div>
+            <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/yogyakarta.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Yogyakarta"</h5>
+                            <a class="btn btn-primary" href="yogyakarta.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">3 Days</a>
+                                <a style="padding-left: 10px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                    <a style="color: black;"> Yogyakarta</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/raja empat.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Raja Empat"</h5>
+                            <a class="btn btn-primary" href="rajaempat.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">1 Week</a>
+                                <a style="padding-left: 50px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                    <a style="color: black;">Papua</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/bandung.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Kota Bandung"</h5>
+                            <a class="btn btn-primary" href="bandung.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">10 Hours</a>
+                                <a style="padding-left: 10px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                    <a style="color: black;"> Bandung</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/bali.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Pantai di Bali"</h5>
+                            <a class="btn btn-primary" href="bali.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">1 Week</a>
+                                <a style="padding-left: 50px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;"> Bali</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/Semarang.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Semarang"</h5>
+                            <a class="btn btn-primary" href="semarang.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">2 Days</a>
+                                <a style="padding-left: 10px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                    <a style="color: black;"> Semarang</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-4" style="padding-top: 50px;">
+                    <div class="card">
+                        <img src="assets/img/surabaya.jpg" style="width: 100%; object-fit: cover; height: 300px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                        <div class="card-body">
+                            <h5 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; padding-top: 15px; color: black;">Paket Tour "Jelajah Keindahan Kota Surabaya"</h5>
+                            <a class="btn btn-primary" href="surabaya.html">Start from Rp. 1.000.000</a>
+                            <div style="padding-top: 10px;">
+                                <img src="assets/img/clock.png" style="width: 4%; height: 4%;">
+                                <a style="color: black;">5 Days</a>
+                                <a style="padding-left: 10px;">
+                                    <img src="assets/img/placeholder.png" style="width: 4%; height: 4%;">
+                                    <a style="color: black;"> Surabaya</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: whitesmoke; padding-bottom: 50px; padding-top: 50px;">
+        <div style="text-align: center;">      
+            <video autoplay loop muted  style="width: 90%;">
+                <source src="OFFICE HOURS JAKARTA CINEMATIC VIDEO _ Canon EOS R6 Mark II 4K.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div>
+    </div>
+    <div id="packages" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#packages" data-slide-to="0" class="active"></li>
+            <li data-target="#packages" data-slide-to="1"></li>
+            <li data-target="#packages" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/cr1.jpg" alt="Pegunungan">
+                <div class="carousel-caption">
+                    <h3>Mendaki puncak Pegunungan Indonesia</h3>
+                    <P>Mendaki dari puncak demi puncak, Menyaksikan matahari terbit dari balik awan</P>
+                    <P>Menyentuh langit dan bintang di tanah nusantara.</P>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/cr2.jpg" alt="Nusa Tenggara">
+                <div class="carousel-caption">
+                    <h3>Jelajahi Ribuan pulau di nusantara</h3>
+                    <p>Menyusuri samudera luas, mengarungi gelombang dan menembus angin,</p>
+                    <P>menemukan surga tersembunyi di antara ribuan pulau nusantara.</P>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/cr4.jpg" alt="Indonesia globe">
+                <div class="carousel-caption">
+                    <h3>Indonesia, negeri yang kaya</h3>
+                    <p>Dengan alamnya yang indah dan budayanya yang mempesona,</p>
+                    <P>menjadi inspirasi dan kebanggaan bagi kita semua.</P>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and rigth controls -->
+        <a class="carousel-control-prev" href="#packages" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#packages" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+    <div>
+        <footer>
+        <div class="card-footer">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body">
+                                <h2>About Tranara</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <P>Trisakti Institute of Tourism is the First Private Tourism Institution in Indonesia with more than 50 years of experience in providing Hospitality and Tourism Education. We are striving to be the Centre of Excellence in Tourism through Sustainable Learning and Education</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body text-center">
+                                <h2>KEEP IN TOUCH</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Address</h4>
+                                    <div class="small text-white-50">Jalan IKPN Tanah Kusir, Bintaro, South Jakarta, Jakarta 12330</div>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-envelope text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Email</h4>
+                                    <div class="small text-white-50"><a>Tranara@gmail.com</a></div>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Phone</h4>
+                                    <div class="small text-white-50">(+62) 123-456-7890</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body">
+                                <h2>Artikel</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <img src="assets/img/bali.jpg" style="width: 70%;">
+                                    <div class="large text-white-50"><br>Paket Tour "Jelajah Keindahan Pantai di Bali"</div>
+                                <hr class="my-4 mx-auto" />
+                                    <img src="assets/img/surabaya.jpg" style="width: 70%;">
+                                    <div class="large text-white-50"><br>Paket Tour "Jelajah Keindahan Kota Surabaya"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <p style="padding-top: 30px;">Hak Cipta &copy;copyright Tranara</p>
+        </footer>
+    </div>
+</body>
+</html>
