@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Tourism</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png" />
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- Java Script -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: white;">
+            <div class="container px-4 px-lg-5" style="background-color: white;">
+              <a class="navbar-brand" href="#page-top">
+                <img src="assets/logo.png" style="background-color: white;" width="250px" alt="Digital Business Tourism">
+              </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="background-color: white;">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: black; background-color: white;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" style="color: black; background-color: white;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color: black; background-color: white;">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary" style="color: whitesmoke; background-color: rgb(211, 142, 14);" href="register.html">Register</a>
+            </div>
+            </div>
+        </nav>
+</head>
+<body>
+    <style>
+        *, html, body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        #mainNav {
+            min-height: 3.5rem;
+            background-color: #fff;
+        }
+        #mainNav .navbar-toggler {
+            font-size: 80%;
+            padding: 0.75rem;
+            color: #64a19d;
+            border: 1px solid #64a19d;
+        }
+        #mainNav .navbar-toggler:focus {
+            outline: none;
+        }
+        #mainNav .navbar-brand {
+            color: #000;
+            font-weight: 700;
+            padding: 0.9rem 0;
+        }
+        #mainNav .navbar-nav .nav-item:hover {
+            color: fade(#fff, 80%);
+            outline: none;
+            background-color: transparent;
+        }
+        #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+            outline: none;
+            background-color: transparent;
+        }
+        @media (min-width: 992px) {
+        #mainNav {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link {
+            transition: none;
+            padding: 2rem 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        #mainNav .nav-link:active {
+            color: #fff;
+        }
+        #mainNav.navbar-shrink {
+            background-color: #fff;
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+            color: #000;
+        }
+        #mainNav.navbar-shrink .nav-link {
+            color: #000;
+            padding: 1.5rem 1.5rem 1.25rem;
+            border-bottom: 0.25rem solid transparent;
+        }
+        #mainNav.navbar-shrink .nav-link:hover {
+            color: #64a19d;
+        }
+        #mainNav.navbar-shrink .nav-link:active {
+            color: #467370;
+        }
+        #mainNav.navbar-shrink .nav-link.active {
+            color: #64a19d;
+            outline: none;
+            border-bottom: 0.25rem solid #64a19d;
+        }
+        }
+        .btn {
+            text-size-adjust: 10%;
+            text-align: center;
+            border-radius: 15px;
+            background-color: none;
+            border-color: rgb(211, 142, 14);
+
+        }
+        .btn:hover {
+            border-color: rgb(184, 124, 14);
+            background-color: rgb(184, 124, 14);
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+            transition-delay: .1s;
+        }
+        /* Style the tab */
+        .tab {
+            padding-top: 10%;
+            overflow: hidden;
+            display: flex;
+            position: sticky;
+            margin-top: 100px;
+            list-style: none;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            font-size: larger;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: all;
+        font-size: 17px;
+        color: lightgrey;
+        text-decoration: none;
+        transition-duration: 300ms;
+        border-bottom: 4px solid rgba(172, 255, 47, 0);
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            color: greenyellow;
+            border-bottom: 4px solid greenyellow;
+            padding-bottom: 10px;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            color: greenyellow;
+            border-bottom: 4px solid greenyellow;
+            padding-bottom: 10px;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        }
+        @media screen and (max-width: 745px) {
+        .bagian1, .bagian1-MISI {
+            flex-direction: column;
+        }
+        }
+        .bagian1 {
+            display: flex; 
+            gap: 10%; 
+            padding-block: 100px;
+            align-items: center;
+            padding-inline: 8%;
+        }
+        .bagian1-MISI {
+            display: flex; 
+            gap: 10%; 
+            padding-block: 100px;
+            margin-top: 100px;
+            align-items: center;
+            padding-inline: 8%;
+            color: black;
+            background-color: whitesmoke;
+        }
+        .text-bagian1 {
+            background-color: whitesmoke;
+        }
+    </style>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Tab1')">Intenery</button>
+        <button class="tablinks" onclick="openCity(event, 'Tab2')">Include & Exclude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tab3')">Terms & Conditions</button>
+        <button class="tablinks" onclick="openCity(event, 'Tab4')">Note</button>
+      </div>
+      
+    <div id="Tab1" class="tabcontent">
+        <div class="bagian1-MISI">
+            <div class="textbagian1" style="background-color: whitesmoke;">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; background-color: whitesmoke;">Day 1</h3>
+                <p style="padding-right: 5%; padding-top: 4%; background-color: whitesmoke;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+                hiburan lokal atau kegiatan santai.</p>
+            </div>
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+        </div>
+        <div class="bagian1">
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+            <div class="textbagian1">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">Day 2</h3>
+                <p style="padding-right: 5%; padding-top: 4%;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara hiburan lokal atau kegiatan santai.</p>
+            </div>
+        </div>
+    </div>
+      
+    <div id="Tab2" class="tabcontent">
+        <div class="bagian1-MISI">
+            <div class="textbagian1" style="background-color: whitesmoke;">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; background-color: whitesmoke;">Day 1</h3>
+                <p style="padding-right: 5%; padding-top: 4%; background-color: whitesmoke;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+                hiburan lokal atau kegiatan santai.</p>
+            </div>
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+        </div>
+        <div class="bagian1">
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+            <div class="textbagian1">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">Day 2</h3>
+                <p style="padding-right: 5%; padding-top: 4%;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara hiburan lokal atau kegiatan santai.</p>
+            </div>
+        </div>
+    </div>
+      
+    <div id="Tab3" class="tabcontent">
+        <div class="bagian1-MISI">
+            <div class="textbagian1" style="background-color: whitesmoke;">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; background-color: whitesmoke;">Day 1</h3>
+                <p style="padding-right: 5%; padding-top: 4%; background-color: whitesmoke;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+                hiburan lokal atau kegiatan santai.</p>
+            </div>
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+        </div>
+        <div class="bagian1">
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+            <div class="textbagian1">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">Day 2</h3>
+                <p style="padding-right: 5%; padding-top: 4%;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara hiburan lokal atau kegiatan santai.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Tab4" class="tabcontent">
+        <div class="bagian1-MISI">
+            <div class="textbagian1" style="background-color: whitesmoke;">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; background-color: whitesmoke;">Day 1</h3>
+                <p style="padding-right: 5%; padding-top: 4%; background-color: whitesmoke;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara 
+                hiburan lokal atau kegiatan santai.</p>
+            </div>
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+        </div>
+        <div class="bagian1">
+            <img src="assets/img/Semarang.jpg" alt="image1" style="width: 45%; height: 40%;">
+            <div class="textbagian1">
+                <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">Day 2</h3>
+                <p style="padding-right: 5%; padding-top: 4%;">Pagi: kumpul di titik pertemuan dan berangkat menuju destinasi pertama. Siang:Tiba di destinasi dan mulai menejelajah objek wisata utama. Nikmati keindahan alam, jelajai tempat-tempat bersejarah, dan rasakan budaya lokal, Malam: Makan malam di restoran lokal dengan menu spesial, diikuti dengan acara hiburan lokal atau kegiatan santai.</p>
+            </div>
+        </div>
+    </div>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
+</body>
+</html>
