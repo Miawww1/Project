@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Tourism</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png" />
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/Logo.png" width="200px" alt="Digital Business Tourism">
+              </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: black;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" style="color: black;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color: black;">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary" style="color: whitesmoke;" href="register.html">Register</a>
+            </div>
+            </div>
+        </nav>
+</head>
+<body>
+
+    <style>
+        /* Reset Doc */
+        * html {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #mainNav {
+            min-height: 3.5rem;
+            background-color: #fff;
+        }
+        #mainNav .navbar-toggler {
+            font-size: 80%;
+            padding: 0.75rem;
+            color: #64a19d;
+            border: 1px solid #64a19d;
+        }
+        #mainNav .navbar-toggler:focus {
+            outline: none;
+        }
+        #mainNav .navbar-brand {
+            color: #000;
+            font-weight: 700;
+            padding: 0.9rem 0;
+        }
+        #mainNav .navbar-nav .nav-item:hover {
+            color: fade(#fff, 80%);
+            outline: none;
+            background-color: transparent;
+        }
+        #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+            outline: none;
+            background-color: transparent;
+        }
+        @media (min-width: 992px) {
+        #mainNav {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            background-color: whitesmoke;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #mainNav .navbar-brand {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link {
+            transition: none;
+            padding: 2rem 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        #mainNav .nav-link:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        #mainNav .nav-link:active {
+            color: #fff;
+        }
+        #mainNav.navbar-shrink {
+            background-color: #fff;
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+            color: #000;
+        }
+        #mainNav.navbar-shrink .nav-link {
+            color: #000;
+            padding: 1.5rem 1.5rem 1.25rem;
+            border-bottom: 0.25rem solid transparent;
+        }
+        #mainNav.navbar-shrink .nav-link:hover {
+            color: #64a19d;
+        }
+        #mainNav.navbar-shrink .nav-link:active {
+            color: #467370;
+        }
+        #mainNav.navbar-shrink .nav-link.active {
+            color: #64a19d;
+            outline: none;
+            border-bottom: 0.25rem solid #64a19d;
+        }
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-repeat: no-repeat;
+            background-size: 100% 20%;
+            color: whitesmoke;
+        }
+        .btn {
+            text-size-adjust: 100px;
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgb(211, 142, 14);
+            border-color: rgb(211, 142, 14);
+
+        }
+        .btn:hover {
+            border-color: rgb(184, 124, 14);
+            background-color: rgb(184, 124, 14);
+            border-radius: 15px;
+            transition: .5s ease-in-out;
+            transition-delay: .1s;
+        }
+        /* Bagian paling atas background */
+        .uppertext {
+            text-align: center;
+            justify-content: center;
+            color: whitesmoke;
+            text-transform: capitalize;
+            padding-top: 15%;
+            
+        }
+        /* Perbagian */
+        .bagian1 {
+            
+            color: black;
+            background-color: white;
+        }
+        .bagian2 {
+            color: black;
+        }
+        .bagian3{
+            padding-top: 100px;
+            color: black;
+            padding-bottom: 150px;
+        }
+        .bagian4 {
+            color: black;
+        }
+        .partbagian4 {
+            padding-top: 100px;
+            padding-bottom: 200px;
+        }
+        .header-abt {
+            position: relative;
+            text-align: center;
+            color: white; margin-top: 4%;
+        }
+
+        @media screen and (max-width: 745px) {
+        .header-abt {
+            margin-top: 0px;
+        }
+
+        .bagian1, .bagian1-MISI {
+            flex-direction: column;
+        }
+        }
+
+        @media screen and (max-width: 701px) {
+            
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            gap: 5%;
+        }
+        }
+
+        .bagian1 {
+            display: flex; 
+            gap: 10%; 
+            padding-block: 100px;
+            align-items: center;
+            padding-inline: 8%;
+        }
+
+        .bagian1-MISI {
+            display: flex; 
+            gap: 10%; 
+            padding-block: 100px;
+            margin-top: 100px;
+            align-items: center;
+            padding-inline: 8%;
+            color: black;
+            background-color: whitesmoke;
+        }
+
+        .bagian-2 {
+            background-color: whitesmoke;
+            align-items: center;
+            text-align: center;
+            color: black;
+            padding-block: 100px;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-inline: 10%;
+            justify-content: center;
+        }
+
+        .card-1 {
+            background-color: white;
+            max-width: 270px;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.267);
+            border-radius: 15px;
+        }
+
+        .card-1 img {
+            width: 50%;
+            padding-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: black;
+            background-image: none;
+        }
+        .card-footer {
+            text-align: center;
+            background-color: rgb(185, 185, 185);
+        }
+        .card-footer-inner {
+            color: whitesmoke;
+        }
+    </style>
+    <div class="header-abt">
+        <img style="width: 100%;" src="assets/img/bgabout.jpg">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <h1 style="font-weight: bold;">ABOUT US</h1>
+            <p>discover the world with us: your trusted travel partner</p>
+        </div>
+    </div>
+    <div class="bagian1">
+        <img src="assets/img/pexels-dominika-roseclay-1252500.jpg" alt="image1" style="width: 45%; height: 40%;">
+        <div class="textbagian1">
+            <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">menghubungkan anda dengan destinasi impian anda</h3>
+            <p style="padding-right: 5%; padding-top: 4%;">Kami adalah tempat yang sempurna bagi para pencari petualangan yang haus akan pengalaman baru dan destinasi menakjubkan. Kami tidak hanya menyediakan informasi tentang destinasi populer, tetapi juga memberikan pandangan mendalam tentang destinasi tersembunyi yang jarang diketahui oleh banyak orang.</p>
+        </div>
+    </div>
+    <div class="bagian-2">
+        <h3 style="padding-bottom: 3%;"><b>Kenapa Memilih Kami</b></h3>
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src="assets/img/rating.png" style="width: 30%;">
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Kami siap menjawab tantangan dan mengeksplorasi peluang baru</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img style="width: 30%;" src="assets/img/travel-and-tourism.png">
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Menyediakan beragam pilihan paket perjalanan yang dapat disesuaikan dengan preferensi pelanggan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img src="assets/img/service.png" style="width: 30%;">
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Memberikan dukungan pelanggan yang ramah, responsif, dan informatif</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- VISI MISI TERBARU -->
+
+    <div class="bagian1">
+        <img src="assets/img/pexels-haley-black-2087391.jpg" alt="image1" style="width: 45%; height: 40%;">
+        <div class="textbagian1">
+            <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">VISI</h3>
+            <p style="padding-right: 5%; padding-top: 4%;">Menjadi penghubung yang andal dan terpercaya bagi para pelancong di seluruh dunia, memberikan akses mudah dan pengalaman perjalanan yang tak terlupakan. Kami berkomitmen untuk menginspirasi orang untuk menjelajahi dunia dengan memberikan informasi terpercaya, rekomendasi pilihan, dan layanan yang ramah bagi setiap pelanggan.</p>
+        </div>
+    </div>
+
+    <div class="bagian1-MISI">
+        <div class="textbagian1">
+            <h3 style="padding-right: 5%; padding-top: 7%; text-align: center; text-transform: capitalize; font-weight: bold; ">MISI</h3>
+            <p style="padding-right: 5%; padding-top: 4%;">Menyediakan platform yang andal dan terpercaya untuk memenuhi kebutuhan perjalanan pelanggan, dengan mengutamakan kepuasan dan kenyamanan mereka. kami berkomitmen untuk terus berinovasi, meningkatakan kualitas layanan, dan menjaga keberlanjutan lingkungan dalam industri perjalanan.</p>
+        </div>
+        <img src="assets/img/pexels-nappy-1058959.jpg" alt="image1" style="width: 45%; height: 40%;">
+    </div>
+
+    <!-- VISI MISI TERBARU -->
+    <footer>
+        <div class="card-footer">
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body">
+                                <h2>About Digital Business Tourism</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <P>"Selamat datang di Digital Business Tourism, destinasi utama Anda untuk perjalanan yang tak terlupakan. Kami adalah platform bisnis perjalanan digital yang menawarkan berbagai paket wisata menarik dan akomodasi terbaik. Dengan teknologi canggih dan layanan pelanggan yang luar biasa, kami berdedikasi untuk membuat setiap perjalanan Anda menjadi pengalaman yang tak terlupakan. Mari jelajahi dunia bersama Digital Business Tourism!"</P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body text-center">
+                                <h2>KEEP IN TOUCH</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Address</h4>
+                                    <div class="small text-white-50">Jalan IKPN Tanah Kusir, Bintaro, South Jakarta, Jakarta 12330</div>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-envelope text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Email</h4>
+                                    <div class="small text-white-50"><a>DigitalBusiness@gmail.com</a></div>
+                                <hr class="my-4 mx-auto" />
+                                    <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Phone</h4>
+                                    <div class="small text-white-50">(+62) 123-456-7890</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-footer-inner">
+                            <div class="card-body">
+                                <h2>Artikel</h2>
+                                <hr class="my-4 mx-auto" />
+                                    <img src="assets/img/bali.jpg" style="width: 70%;">
+                                    <div class="large text-white-50"><br>Paket Tour "Jelajah Keindahan Pantai di Bali"</div>
+                                <hr class="my-4 mx-auto" />
+                                    <img src="assets/img/surabaya.jpg" style="width: 70%;">
+                                    <div class="large text-white-50"><br>Paket Tour "Jelajah Keindahan Kota Surabaya"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <p style="padding-top: 30px;">Hak Cipta &copy;copyright Digital Business Tourism</p>
+    </footer>
+</body>
+</html>
